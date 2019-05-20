@@ -1,0 +1,30 @@
+<div class="repolist-container">
+  <div class="row repo-head" *ngIf="repoList">
+    <div class="col-md-5 leftAlign">
+      Repository Name
+    </div>
+    <div class="col-md-2">
+      Forked Count
+    </div>
+    <div class="col-md-2">
+      Watcher Count
+    </div>
+    <div class="col-md-3">
+      PICK
+    </div>
+  </div>
+  <div class="row repo-body" *ngFor='let repo of repoList'>
+    <div class="col-md-5 leftAlign">
+        {{repo.name}}
+    </div>
+    <div class="col-md-2" >
+        {{repo.forks_count}}
+    </div>
+    <div class="col-md-2">
+        {{repo.watchers_count}}
+    </div>
+    <div class="col-md-3">
+        <button class='btn-sm btn-primary' (click)="pickedRepo(repo.id)">PICK</button>
+    </div>
+  </div>
+</div>
