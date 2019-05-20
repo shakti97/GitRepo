@@ -1,0 +1,10 @@
+.header{
+    font-size: 50px;
+    background-color: blue;
+    background-image: linear-gradient(darkblue, blue);
+    color: white;
+    font-weight: 800;
+    text-align: center;
+    padding: 2%;
+    margin-bottom:  1%;
+}
