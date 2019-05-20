@@ -1,0 +1,30 @@
+<div class="repolist-container">
+  <div class="row repo-head" *ngIf="myRepoList">
+    <div class="col-md-6 leftAlign">
+      Repository Name
+    </div>
+    <div class="col-md-2">
+      Owner Name
+    </div>
+    <div class="col-md-2">
+      Forked Count
+    </div>
+    <div class="col-md-2">
+      Watcher Count
+    </div>
+  </div>
+  <div class="row repo-body" *ngFor="let repo of myRepoList">
+    <div class="col-md-6 leftAlign">
+      {{ repo.name }}
+    </div>
+    <div class="col-md-2">
+      {{repo.owner.login}}
+    </div>
+    <div class="col-md-2">
+      {{ repo.forks_count }}
+    </div>
+    <div class="col-md-2">
+      {{ repo.watchers_count }}
+    </div>
+  </div>
+</div>
